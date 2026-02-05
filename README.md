@@ -16,7 +16,7 @@ A Python CLI tool that syncs unfulfilled orders from Shopify to Everstox fulfill
 
 ```bash
 # Clone and setup
-git clone <repository-url>
+git clone https://github.com/maxvalle/shopify-connector.git
 cd shopify-connector
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -42,7 +42,7 @@ python -m src.main
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/maxvalle/shopify-connector.git
    cd shopify-connector
    ```
 
