@@ -6,3 +6,4 @@ pydantic-settings>=2.0.0
 
 # Development/Testing
 pytest>=8.0.0
+types-requests>=2.31.0

@@ -124,6 +124,7 @@ def setup_logging(
     # Prevent propagation to root logger to avoid duplicate logs
     logger.propagate = False
 
+    handler: logging.Handler
     if format_type == LogFormat.JSON:
         # JSON format for production/log aggregation
         handler = logging.StreamHandler(sys.stdout)
