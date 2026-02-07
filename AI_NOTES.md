@@ -162,14 +162,14 @@ Build a small Python app that simulates a connector for Shopify:
 ## Second iteration agent
 
 1. Fetching orders
-	- Use last 14 days from now window for fetching orders
-	- Log and respect Shopify GraphQL throttling and cost. Suggest and implementa a backoff mechanism if throttled
+	- Use last 14 days from now window for fetching orders (possibly configurable)
+	- Log and respect Shopify GraphQL throttling and cost. Suggest and implement a backoff mechanism if throttled
 
 2. Transforming to everstox payload
 	- For items, decide quantities consistent with a partial fulfillment policy (see next point)
 
 3. Partially fulfilled orders
-	- Some orders are partially fulfilled. Think about a reasonable way to deal with them and treat them accordingly
+	- Some orders are partially fulfilled. Think about a reasonable way to deal with them and treat them accordingly. Example: fulfill what hasn't been shipped yet to prevent duplicate fulfillments (typical approach for fulfillment)
 
 ## Third iteration agent
 
