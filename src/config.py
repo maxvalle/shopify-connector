@@ -97,13 +97,11 @@ class Settings(BaseSettings):
     )
 
     @computed_field
-    @property
     def tag_whitelist(self) -> list[str]:
         """Parse whitelist as list of tags."""
         return _parse_comma_list(self.tag_whitelist_raw)
 
     @computed_field
-    @property
     def tag_blacklist(self) -> list[str]:
         """Parse blacklist as list of tags."""
         return _parse_comma_list(self.tag_blacklist_raw)
@@ -131,4 +129,4 @@ def get_settings() -> Settings:
     Uses lru_cache to ensure settings are only loaded once.
     Call get_settings.cache_clear() to reload settings if needed.
     """
-    return Settings()
+    return Settings()  # type: ignore[call-arg]
